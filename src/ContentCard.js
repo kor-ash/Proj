@@ -1,20 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-const ContentCard = () => {
-    return (
-        <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
-      </Card>
-    );
+import CardInfo from './CardInfo';
+import styles from './ContentCard.module.css'
+import Modal from 'react-bootstrap/Modal';
+
+const ContentCard = ({ line }) => {
+  return (
+    <Card style={{ width: '18rem' }} className="text-center">
+      <Card.Body>
+        <Card.Header className={styles.cardLineTitle}>{line}</Card.Header>
+        <CardInfo></CardInfo>
+        <div className={styles.cardBtn}>
+          <Button variant="primary">Go Match</Button>
+          <Button variant="primary">See more..</Button>
+        </div>
+      </Card.Body>
+    </Card>
+  );
 };
 
 export default ContentCard;

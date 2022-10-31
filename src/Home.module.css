@@ -1,24 +1,29 @@
-.homePlate{
+.homePlate {
     background-color: lightgray;
-    width:100%;
-    height:700px;
+    width: 100%;
+    height: 850px;
 }
-.homeNavUtil{
-    font-size:35px;
-    width:100px;
+
+.homeNavUtil {
+    font-size: 35px;
+    width: 100px;
 }
-.homeSignOut{
-    margin-left:15px;
-    margin-right:15px;
+
+.homeSignOut {
+    margin-left: 15px;
+    margin-right: 15px;
 }
-.homeUserInfo:hover{
+
+.homeUserInfo:hover {
     color: red;
 }
-.homeSignOut:hover{
+
+.homeSignOut:hover {
     color: red;
 }
-.homeCard{
+
+.homeCard {
+    margin-top: 15px;
     display: flex;
     justify-content: space-around;
 }
-

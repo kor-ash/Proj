@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import styles from './Home.module.css'
-import { faSignOut,faUser} from "@fortawesome/free-solid-svg-icons";
+import { faSignOut, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContentCard from './ContentCard';
 const Home = () => {
@@ -40,19 +40,20 @@ const Home = () => {
 
                     <Navbar.Brand href="#home">
                         <div className={styles.homeNavUtil}>
-                            <FontAwesomeIcon icon={faSignOut} className={styles.homeSignOut}/>
+                            <FontAwesomeIcon icon={faSignOut} className={styles.homeSignOut} />
                             <FontAwesomeIcon icon={faUser} className={styles.homeUserInfo} />
                         </div>
                     </Navbar.Brand>
                 </Container>
-            </Navbar>    
+            </Navbar>
             <div className={styles.homeCard}>
-                <ContentCard></ContentCard>
+                <ContentCard line={"봇"}></ContentCard>
 
-                <ContentCard></ContentCard>
+                <ContentCard line={"정글"}></ContentCard>
 
-                <ContentCard></ContentCard>
-                
+                <ContentCard line={"탑"}></ContentCard>
+                <ContentCard line={"미드"}></ContentCard>
+
             </div>
 
         </div>
