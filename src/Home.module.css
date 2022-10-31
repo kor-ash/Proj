@@ -1,0 +1,24 @@
+.homePlate{
+    background-color: lightgray;
+    width:100%;
+    height:700px;
+}
+.homeNavUtil{
+    font-size:35px;
+    width:100px;
+}
+.homeSignOut{
+    margin-left:15px;
+    margin-right:15px;
+}
+.homeUserInfo:hover{
+    color: red;
+}
+.homeSignOut:hover{
+    color: red;
+}
+.homeCard{
+    display: flex;
+    justify-content: space-around;
+}
+
