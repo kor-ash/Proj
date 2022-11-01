@@ -3,5 +3,9 @@
 }
 
 .modalFooter {
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+}
+.modalFooter >Button{
 }
