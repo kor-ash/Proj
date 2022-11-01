@@ -1,46 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import styles from './Home.module.css'
-import { faSignOut, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faSignOut, faUser, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContentCard from './ContentCard';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 const Home = () => {
-    /*
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">
-                            Another action
-                        </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">
-                            Separated link
-                        </NavDropdown.Item>
-                    </NavDropdown>
-                </Nav>
-        </Navbar.Collapse>
-    */
+    const [target, setTarget] = useState("")
+
+    const navi = useNavigate()
+    const enterNick = (e) => {
+        if (e.key == 'Enter') {
+            navi(`/search/${target}`)
+        }
+    }
+    const searchNick = (e) => {
+        console.log(e.target.value)
+        setTarget(e.target.value)
+    }
     return (
         <div className={styles.homePlate}>
             <Navbar bg="dark" expand="lg" variant='dark'>
                 <Container>
-                    <Navbar.Brand href="#home">듀오 구해요</Navbar.Brand>
+                    <Navbar.Brand>듀오 구해요</Navbar.Brand>
 
 
-                    <Navbar.Brand href="#home">커뮤니티</Navbar.Brand>
-                    <Navbar.Brand href="#home">랭 킹</Navbar.Brand>
+                    <Navbar.Brand>커뮤니티</Navbar.Brand>
+                    <Navbar.Brand>랭 킹</Navbar.Brand>
 
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand>
                         <div className={styles.homeNavUtil}>
-                            <FontAwesomeIcon icon={faSignOut} className={styles.homeSignOut} />
+                            <Link to="/">
+                                <FontAwesomeIcon icon={faSignOut} className={styles.homeSignOut} />
+                            </Link>
                             <FontAwesomeIcon icon={faUser} className={styles.homeUserInfo} />
                         </div>
                     </Navbar.Brand>
@@ -55,8 +50,11 @@ const Home = () => {
                 <ContentCard line={"미드"}></ContentCard>
 
             </div>
-
-        </div>
+            <div className={styles.homeSearch}>
+                <input className={styles.homeSearchInput} placeholder="소환사명을 검색해보세요" onChange={searchNick} onKeyPress={enterNick}></input>
+                <FontAwesomeIcon icon={faSearch} className={styles.homeUserSearch} />
+            </div>
+        </div >
     );
 };
 

@@ -8,13 +8,8 @@
     border-radius: 15px;
 }
 
-#Row1 {
-    height: 20px;
-    text-align: center;
-    border: solid 1px black;
-}
 
-.loginLogo {
+.signUpLogo {
     font-weight: 1000;
     font-size: 45px;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,44 +24,22 @@
     margin-bottom: 15%;
 }
 
+#loginNickName {
+    font-weight: 800;
+    font-size: 25px;
+    margin-left: 5px;
+    margin-top: 10%;
+    margin-bottom: 15%;
+}
+
 #loginPassword {
     font-weight: 800;
     font-size: 25px;
     margin-left: 5px;
 }
 
-#loginId {
-    margin-left: 5%;
-    width: 80%;
-}
 
-.loginCheckbox {
-    display: flex;
-    margin-top: 15px;
-    margin-left: 15px;
-}
 
-.loginSignup {
-    font-weight: 800;
-    margin-left: 25%;
-}
-
-#loginPw {
-    margin-left: 5%;
-    width: 80%;
-}
-
-.loginSns {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-}
-
-.loginSns>div {
-    font-size: 25px;
-    margin-left: 7%;
-    margin-right: 7%;
-}
 
 .loginSubmit {
     margin-left: 30%;
