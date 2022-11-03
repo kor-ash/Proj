@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table';
 import ShowInfo from './ShowInfo';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import styles from './CardInfo.module.css'
+import styles from './css/CardInfo.module.css'
 const CardInfo = () => {
     useEffect(() => {
         /*

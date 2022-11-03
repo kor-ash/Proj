@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import styles from './Home.module.css'
+import styles from './css/Home.module.css'
 import { faSignOut, faUser, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContentCard from './ContentCard';
@@ -25,12 +25,15 @@ const Home = () => {
         <div className={styles.homePlate}>
             <Navbar bg="dark" expand="lg" variant='dark'>
                 <Container>
-                    <Navbar.Brand>듀오 구해요</Navbar.Brand>
-
-
-                    <Navbar.Brand>커뮤니티</Navbar.Brand>
-                    <Navbar.Brand>랭 킹</Navbar.Brand>
-
+                    <Link to='/home'>
+                        <Navbar.Brand>듀오 구해요</Navbar.Brand>
+                    </Link>
+                    <Link to='/community'>
+                        <Navbar.Brand>커뮤니티</Navbar.Brand>
+                    </Link>
+                    <Link to='/ranking'>
+                        <Navbar.Brand>랭 킹</Navbar.Brand>
+                    </Link>
                     <Navbar.Brand>
                         <div className={styles.homeNavUtil}>
                             <Link to="/">

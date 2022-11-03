@@ -1,0 +1,13 @@
+.comWrap{
+    height: 650px;
+    width:100%;
+    background-size: auto;
+    background-repeat:no-repeat;
+    background-image: url('/img/sea.jpg');
+    padding-top: 5%;
+}
+.comRowContainer{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2%;
+}

@@ -6,22 +6,23 @@ import Form from "react-bootstrap/Form";
 import Carousel from 'react-bootstrap/Carousel';
 import { faInstagram, faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from './Login.module.css'
+import styles from './css/Login.module.css'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 const Login = () => {
     return (
-        <div>
+        <div className={styles.loginBack}>
             <div className={styles.loginPlate}>
+
                 <Stack gap={3}>
                     <div className={styles.loginLogo}>Log-in</div>
                     <Form>
                         <Form.Group id={styles.loginEmail}>
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" id="loginId"></Form.Control>
+                            <Form.Label style={{ marginLeft: "3%" }}>Email</Form.Label>
+                            <Form.Control style={{ width: "80%", marginLeft: "3%" }} type="email" placeholder="Enter email"></Form.Control>
                         </Form.Group>
                         <Form.Group id={styles.loginPassword}>
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" id="loginPw"></Form.Control>
+                            <Form.Label style={{ marginLeft: "3%" }} >Password</Form.Label>
+                            <Form.Control style={{ width: "80%", marginLeft: "3%" }} type="password"></Form.Control>
                         </Form.Group>
                         <Form.Group className={styles.loginCheckbox}>
                             <Form.Check type="checkbox" label="Remember Me"></Form.Check>

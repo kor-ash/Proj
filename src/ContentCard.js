@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import CardInfo from './CardInfo';
-import styles from './ContentCard.module.css'
+import styles from './css/ContentCard.module.css'
 import Modal from 'react-bootstrap/Modal';
+import { Link } from 'react-router-dom';
 
 const ContentCard = ({ line }) => {
   return (
@@ -12,7 +13,9 @@ const ContentCard = ({ line }) => {
         <Card.Header className={styles.cardLineTitle}>{line}</Card.Header>
         <CardInfo></CardInfo>
         <div className={styles.cardBtn}>
-          <Button variant="primary">Go Match</Button>
+          <Link to='/match/:line'>
+            <Button variant="primary">Go Match</Button>
+          </Link>
           <Button variant="primary">See more..</Button>
         </div>
       </Card.Body>

@@ -1,13 +1,16 @@
 .loginPlate {
-    margin-top: 25px;
-    height: 100%;
-    background-color: lightgray;
-    border: solid 1px blue;
-    margin-left: 35%;
+    height: 80%;
+    margin-left: 36%;
     width: 30%;
-    border-radius: 15px;
 }
-
+.loginBack{
+    padding-top: 7%;
+    height:850px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('/img/login.jpg');
+    background-color: burlywood;
+}
 #Row1 {
     height: 20px;
     text-align: center;
@@ -35,11 +38,6 @@
     margin-left: 5px;
 }
 
-#loginId {
-    margin-left: 5%;
-    width: 80%;
-}
-
 .loginCheckbox {
     display: flex;
     margin-top: 15px;
@@ -51,10 +49,7 @@
     margin-left: 25%;
 }
 
-#loginPw {
-    margin-left: 5%;
-    width: 80%;
-}
+
 
 .loginSns {
     margin-top: 50px;

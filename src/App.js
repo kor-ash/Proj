@@ -6,8 +6,8 @@ import Test from './Test';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import SignUp from './SignUp';
 import SearchResult from './SearchResult';
-function App() {
-  return (
+import Community from './Community';
+/*
     <div>
       <BrowserRouter>
         <Routes>
@@ -15,6 +15,17 @@ function App() {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/Signup" element={<SignUp />}></Route>
           <Route path="/search/:id" element={<SearchResult></SearchResult>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+*/
+function App() {
+  return (
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/community" element={<Community></Community>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
